@@ -1,0 +1,170 @@
+.section {
+  background: var(--color-white);
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.featureCard {
+  padding: 24px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  background: var(--color-bg-light);
+  position: relative;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.featureCard:hover {
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
+}
+
+.featureIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: rgba(26, 140, 255, 0.08);
+  border-radius: var(--border-radius-sm);
+  margin-bottom: 16px;
+}
+
+.featureTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+
+.featureText {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* Scheme */
+.schemeWrap {
+  background: var(--color-primary);
+  border-radius: var(--border-radius);
+  padding: 32px 0 32px 32px;
+  overflow: hidden;
+}
+
+.schemeLabel {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.75);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+  padding-right: 32px;
+}
+
+/* ── Marquee ── */
+.marqueeOuter {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Fade edges */
+.marqueeOuter::before,
+.marqueeOuter::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+.marqueeOuter::before {
+  left: 0;
+  background: linear-gradient(to right, var(--color-primary), transparent);
+}
+.marqueeOuter::after {
+  right: 0;
+  background: linear-gradient(to left, var(--color-primary), transparent);
+}
+
+.marqueeTrack {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 36s linear infinite;
+}
+
+.marqueeTrack:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marqueeInner {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.cycleIcon {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.marqueeItem {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-right: 18px;
+}
+
+.cyclePause {
+  display: inline-block;
+  width: 180px;
+  flex-shrink: 0;
+}
+
+.schemeNode {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  white-space: nowrap;
+}
+
+.schemeNodeFinal {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-white);
+  font-weight: 600;
+}
+
+.arrow {
+  width: 28px;
+  height: 12px;
+  color: rgba(255, 255, 255, 0.35);
+  flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
