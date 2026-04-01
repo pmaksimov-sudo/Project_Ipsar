@@ -6,7 +6,7 @@ import { Icon } from '../Icons/Icons'
 import { PrivacyModal, ConsentModal } from '../LegalModals/LegalModals'
 import styles from './ContactForm.module.css'
 
-const EMAILJS_SERVICE  = 'service_vm8f3wk'
+const EMAILJS_SERVICE  = 'service_cnt7d71'
 const EMAILJS_TEMPLATE = 'template_62ep3q7'
 const EMAILJS_KEY      = 'UUC5lftkf4XozPcGg'
 
