@@ -161,6 +161,10 @@
   }
 }
 
+.btnTextMobile {
+  display: none;
+}
+
 @media (max-width: 600px) {
   .custom {
     flex-direction: column;
@@ -168,8 +172,11 @@
     padding: 24px 20px;
   }
 
-  .custom .btn {
-    width: 100%;
-    justify-content: center;
+  .btnTextFull {
+    display: none;
+  }
+
+  .btnTextMobile {
+    display: inline;
   }
 }

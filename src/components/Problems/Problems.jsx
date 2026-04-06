@@ -25,7 +25,7 @@ export default function Problems() {
       <div className="container">
         <h2 className="section-title">Что мешает лаборатории работать без сбоев</h2>
         <p className="section-subtitle">
-          Типичные проблемы, с которыми сталкиваются лаборатории при использовании систем водоочистки
+          Типичные проблемы, с которыми сталкиваются лаборатории при использовании систем водоочистки.
         </p>
 
         <div className={styles.grid}>

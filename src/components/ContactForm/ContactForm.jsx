@@ -6,9 +6,9 @@ import { Icon } from '../Icons/Icons'
 import { PrivacyModal, ConsentModal } from '../LegalModals/LegalModals'
 import styles from './ContactForm.module.css'
 
-const EMAILJS_SERVICE  = 'service_cnt7d71'
-const EMAILJS_TEMPLATE = 'template_62ep3q7'
-const EMAILJS_KEY      = 'UUC5lftkf4XozPcGg'
+const EMAILJS_SERVICE  = 'service_xo807ko'
+const EMAILJS_TEMPLATE = 'template_gvkbsim'
+const EMAILJS_KEY      = 'eb9x1T_OPZ90V2vsE'
 
 const INITIAL = { name: '', org: '', phone: '', email: '', comment: '' }
 
@@ -282,8 +282,8 @@ export default function ContactForm() {
                 <span className={styles.contactIcon}><Icon name="headphones" size={18} color="rgba(255,255,255,0.5)" /></span>
                 <div>
                   <span className={styles.contactLabel}>Техподдержка {CONTACTS.support}</span>
-                  <a href="tel:+74957373322" className={styles.contactValue}>Раб. 8 (495) 737-33-22 <span className={styles.contactTime}>(9:00–17:00 МСК)</span></a>
-                  <a href="tel:+79160747906" className={styles.contactValue}>Моб. +7 (916) 074-79-06 <span className={styles.contactTime}>(17:00–09:00 МСК)</span></a>
+                  <span className={styles.contactValue}>Раб. <a href="tel:+74957373322">+7 (495) 737-33-22</a><br/><span className={styles.contactTime}>(9:00–17:00 МСК)</span></span>
+                  <span className={styles.contactValue}>Моб. <a href="tel:+79160747906">+7 (916) 074-79-06</a><br/><span className={styles.contactTime}>(17:00–09:00 МСК)</span></span>
                 </div>
               </div>
             </div>

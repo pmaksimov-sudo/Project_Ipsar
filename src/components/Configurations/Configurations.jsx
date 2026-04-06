@@ -25,7 +25,7 @@ export default function Configurations() {
       <div className="container">
         <h2 className="section-title">Оптимальное решение для вашей лаборатории</h2>
         <p className="section-subtitle">
-          Три типовые конфигурации для лабораторий разного размера — или индивидуальное решение под ваши задачи
+          Три типовые конфигурации для лабораторий разного размера или индивидуальное решение под ваши задачи.
         </p>
 
         <div className={styles.grid}>
@@ -74,7 +74,8 @@ export default function Configurations() {
         <div className={`fade-in ${styles.custom}`}>
           <p>Нужна индивидуальная конфигурация?</p>
           <button className="btn btn-primary" onClick={scrollToContact}>
-            Оставьте заявку — подберём под ваши задачи
+            <span className={styles.btnTextFull}>Оставьте заявку — подберём под ваши задачи</span>
+            <span className={styles.btnTextMobile}>Оставить заявку</span>
           </button>
         </div>
       </div>

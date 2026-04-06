@@ -69,6 +69,10 @@ export function AboutModal({ onClose }) {
           <div className={styles.privacySection}>
             <p className={styles.privacySectionTitle}>Направления деятельности</p>
             <p className={styles.privacySectionText}>
+              Узнайте больше о наших возможностях: полный каталог продукции и услуг группы компаний размещён на сайте ООО Группа Компаний СМТ{' '}
+              <a href="https://smtgroup.ru" target="_blank" rel="noopener noreferrer" style={{color: 'var(--color-accent)'}}>smtgroup.ru</a>
+            </p>
+            <p className={styles.privacySectionText}>
               — Производство систем водоочистки для клинико-диагностических лабораторий и научно-исследовательских центров, где требуется высокая степень очистки воды, включая полное сервисное сопровождение: монтаж, обучение, плановое обслуживание, поставка расходных материалов.
             </p>
             <p className={styles.privacySectionText}>
@@ -83,19 +87,22 @@ export function AboutModal({ onClose }) {
           </div>
           <div className={styles.privacySection}>
             <p className={styles.privacySectionTitle}>Контакты</p>
-            <p className={styles.privacySectionText}>
-              Email: info@smtgroup.ru<br />
-              Пн–Чт 9:00–17:00 МСК<br />
-              Пт 9:00–16:00 МСК<br />
-              Телефон: 8 (495) 737-33-22<br />
-              Сайт: <a href="https://smtgroup.ru" target="_blank" rel="noopener noreferrer" style={{color: 'var(--color-accent)'}}>smtgroup.ru</a>
-            </p>
+            <p className={styles.privacySectionText}>г. Москва, ул. Кастанаевская, д. 14</p>
+            <p className={styles.privacySectionText}>Телефон: <a href="tel:+74957373322" style={{color: 'var(--color-accent)'}}>+7 (495) 737-33-22</a></p>
+            <p className={styles.privacySectionText}>Email: <a href="mailto:info@smtgroup.ru" style={{color: 'var(--color-accent)'}}>info@smtgroup.ru</a></p>
           </div>
           <div className={styles.privacySection} id="about-support">
             <p className={styles.privacySectionTitle}>Техподдержка 24/7</p>
             <p className={styles.privacySectionText}>
-              Раб. <a href="tel:+74957373322" style={{color: 'var(--color-accent)'}}>8 (495) 737-33-22</a> <span style={{opacity: 0.6}}>(9:00–17:00 МСК)</span><br />
-              Моб. <a href="tel:+79160747906" style={{color: 'var(--color-accent)'}}>+7 (916) 074-79-06</a> <span style={{opacity: 0.6}}>(17:00–09:00 МСК)</span>
+              Раб. <a href="tel:+74957373322" style={{color: 'var(--color-accent)'}}>+7 (495) 737-33-22</a><br /><span style={{opacity: 0.6}}>(9:00–17:00 МСК)</span><br /><br />
+              Моб. <a href="tel:+79160747906" style={{color: 'var(--color-accent)'}}>+7 (916) 074-79-06</a><br /><span style={{opacity: 0.6}}>(17:00–09:00 МСК)</span>
+            </p>
+          </div>
+          <div className={styles.privacySection}>
+            <p className={styles.privacySectionTitle}>График работы</p>
+            <p className={styles.privacySectionText}>
+              Пн–Чт 9:00–17:00 МСК<br />
+              Пт 9:00–16:00 МСК
             </p>
           </div>
         </div>
@@ -123,12 +130,10 @@ export default function Footer() {
           <div className={styles.brand}>
             <span className={styles.logo}>IPSAR</span>
             <p className={styles.tagline}>
-              Системы лабораторной водоочистки.<br />
-              Вода тип I и тип II для российских лабораторий.
+              Автоматизированные лабораторные системы водоочистки – вода I и II типа.
             </p>
             <div className={styles.brandLinks}>
               <button className={styles.brandBtn} onClick={() => setShowAbout(true)}>О нас</button>
-              <a href="https://smtgroup.ru/" target="_blank" rel="noopener noreferrer" className={styles.brandLink}>smtgroup.ru</a>
             </div>
             <p className={styles.brandCompany}>{CONTACTS.company}</p>
             <p className={styles.brandAddress}>г. Москва, ул. Кастанаевская, д. 14</p>
@@ -150,6 +155,7 @@ export default function Footer() {
 
           <div className={styles.contactsCol}>
             <p className={styles.navTitle}>Контакты</p>
+            <a href="tel:+74957373322" className={styles.contact}>+7 (495) 737-33-22</a>
             <a href={`mailto:${CONTACTS.email}`} className={styles.contact}>
               {CONTACTS.email}
             </a>
@@ -164,8 +170,8 @@ export default function Footer() {
             >
               Техподдержка {CONTACTS.support}
             </button>
-            <a href="tel:+74957373322" className={styles.contactMuted}>Раб. 8 (495) 737-33-22 <span className={styles.contactTime}>(9:00–17:00 МСК)</span></a>
-            <a href="tel:+79160747906" className={styles.contactMuted}>Моб. +7 (916) 074-79-06 <span className={styles.contactTime}>(17:00–09:00 МСК)</span></a>
+            <span className={styles.contactMuted}>Раб. <a href="tel:+74957373322" className={styles.phoneLink}>+7 (495) 737-33-22</a><br/><span className={styles.contactTime}>(9:00–17:00 МСК)</span></span>
+            <span className={styles.contactMuted}>Моб. <a href="tel:+79160747906" className={styles.phoneLink}>+7 (916) 074-79-06</a><br/><span className={styles.contactTime}>(17:00–09:00 МСК)</span></span>
           </div>
 
           <div className={styles.docsCol}>

@@ -46,7 +46,7 @@ export default function Header() {
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.inner}>
         <a href="/" className={styles.logo} aria-label="IPSAR — главная">
-          <img src="/logo-ipsar.svg" alt="IPSAR" className={styles.logoImg} />
+          <img src="/logo_text.svg" alt="IPSAR" className={styles.logoImg} />
         </a>
 
         <nav className={`${styles.nav} ${menuOpen ? styles.open : ''}`} aria-label="Основная навигация">

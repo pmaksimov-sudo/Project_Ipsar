@@ -37,7 +37,7 @@ export default function Service() {
           <span className={styles.highlightIcon}><Icon name="zap" size={32} color="var(--color-accent)" /></span>
           <div>
             <strong>Среднее время реакции на обращение — менее 2 часов</strong>
-            <p>Техническая поддержка доступна круглосуточно, без выходных</p>
+            <p>Техническая поддержка доступна круглосуточно и без выходных</p>
           </div>
         </div>
       </div>

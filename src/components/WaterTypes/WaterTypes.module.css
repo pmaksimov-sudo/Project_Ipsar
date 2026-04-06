@@ -100,7 +100,6 @@
 
 .paramsDark {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
-  padding-bottom: 32px;
 }
 
 .param {
@@ -193,5 +192,24 @@
   .colLight,
   .colDark {
     padding: 28px 24px;
+  }
+
+  .table th,
+  .table td {
+    padding: 12px 10px;
+  }
+
+  .table th:first-child,
+  .table td:first-child {
+    width: 30%;
+  }
+
+  .table th:nth-child(2),
+  .table td:nth-child(2),
+  .table th:last-child,
+  .table td:last-child {
+    width: 35%;
+    font-size: 12px;
+    white-space: nowrap;
   }
 }

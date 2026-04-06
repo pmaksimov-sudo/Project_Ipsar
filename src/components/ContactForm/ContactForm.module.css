@@ -248,7 +248,8 @@
   transition: color var(--transition);
 }
 
-a.contactValue:hover {
+a.contactValue:hover,
+.contactValue a:hover {
   color: var(--color-accent);
 }
 

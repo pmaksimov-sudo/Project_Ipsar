@@ -24,7 +24,7 @@ export default function Documents() {
       <div className="container">
         <h2 className="section-title">Соответствие стандартам подтверждено документально</h2>
         <p className="section-subtitle">
-          Системы водоочистки IPSAR прошли все необходимые процедуры регистрации и сертификации
+          Системы водоочистки IPSAR прошли все необходимые процедуры регистрации и сертификации.
         </p>
 
         <div className={styles.grid}>

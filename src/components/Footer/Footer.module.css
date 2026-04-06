@@ -94,13 +94,19 @@
 
 .contactMuted {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
   display: block;
+  line-height: 1.6;
 }
 
-.contactMuted:hover {
-  color: rgba(255, 255, 255, 0.9);
+.phoneLink {
+  color: rgba(255, 255, 255, 0.8);
+  transition: color var(--transition);
+}
+
+.phoneLink:hover {
+  color: var(--color-accent);
 }
 
 .contactTime {

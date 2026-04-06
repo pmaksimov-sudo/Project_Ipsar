@@ -20,7 +20,7 @@ export default function WaterTypes() {
       <div className="container">
         <h2 className="section-title">Вода под любые задачи лаборатории</h2>
         <p className="section-subtitle">
-          Системы водоочистки IPSAR обеспечивают получение воды I и II типа для высокоточных и рутинных задач
+          Системы водоочистки IPSAR обеспечивают получение воды I и II типа для высокоточных и рутинных задач.
         </p>
 
         <div className={styles.columns}>
