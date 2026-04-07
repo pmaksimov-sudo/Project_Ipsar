@@ -25,7 +25,7 @@ export default function Configurations() {
       <div className="container">
         <h2 className="section-title">Оптимальное решение для вашей лаборатории</h2>
         <p className="section-subtitle">
-          Три типовые конфигурации для лабораторий разного размера или индивидуальное решение под ваши задачи.
+          Три типовые комплектации для лабораторий разного размера или индивидуальное решение под ваши задачи.
         </p>
 
         <div className={styles.grid}>

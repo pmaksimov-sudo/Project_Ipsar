@@ -36,7 +36,7 @@ export default function ContactForm() {
 
   const validateField = (name, value) => {
     if (name === 'name') return value.trim() ? '' : 'Укажите имя'
-    if (name === 'org') return value.trim() ? '' : 'Укажите организацию'
+
     if (name === 'phone') {
       const digits = value.replace(/\D/g, '')
       if (!digits) return 'Укажите телефон'
@@ -79,7 +79,7 @@ export default function ContactForm() {
 
   const validate = () => {
     const e = {}
-    const fields = ['name', 'org', 'phone', 'email']
+    const fields = ['name', 'phone', 'email']
     fields.forEach((f) => {
       const err = validateField(f, form[f])
       if (err) e[f] = err
@@ -90,7 +90,7 @@ export default function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault()
     const e2 = validate()
-    setTouched({ name: true, org: true, phone: true, email: true })
+    setTouched({ name: true, phone: true, email: true })
     if (Object.keys(e2).length) {
       setErrors(e2)
       return
@@ -126,28 +126,27 @@ export default function ContactForm() {
 
   if (submitted) {
     return (
-      <section className={styles.section} id="contact">
-        <div className="container">
-          <div className={styles.success}>
-            <span className={styles.successIcon}><Icon name="check" size={28} color="#fff" /></span>
-            <h2>Заявка отправлена!</h2>
-            <p>Специалист свяжется с вами в течение рабочего дня.</p>
-            <button className="btn btn-primary" onClick={() => setSubmitted(false)}>
-              Отправить ещё одну заявку
-            </button>
-            <button
-              className="btn btn-outline"
-              onClick={() => {
-                setSubmitted(false)
-                const scrollEl = document.getElementById('page-scroll')
-                if (scrollEl) scrollEl.scrollTo({ top: 0, behavior: 'smooth' })
-              }}
-            >
-              Вернуться на сайт
-            </button>
-          </div>
+      <>
+        <section className={styles.section} id="contact" />
+        <div className={styles.success}>
+          <span className={styles.successIcon}><Icon name="check" size={28} color="#fff" /></span>
+          <h2>Заявка отправлена!</h2>
+          <p>Специалист свяжется с вами в течение рабочего дня.</p>
+          <button className="btn btn-primary" onClick={() => setSubmitted(false)}>
+            Отправить ещё одну заявку
+          </button>
+          <button
+            className="btn btn-outline"
+            onClick={() => {
+              setSubmitted(false)
+              const scrollEl = document.getElementById('page-scroll')
+              if (scrollEl) scrollEl.scrollTo({ top: 0, behavior: 'smooth' })
+            }}
+          >
+            Вернуться на сайт
+          </button>
         </div>
-      </section>
+      </>
     )
   }
 
@@ -178,7 +177,7 @@ export default function ContactForm() {
                   {errors.name && <span className={styles.error}>{errors.name}</span>}
                 </div>
                 <div className={styles.field}>
-                  <label className={styles.label} htmlFor="org">Организация *</label>
+                  <label className={styles.label} htmlFor="org">Организация</label>
                   <input
                     id="org"
                     name="org"

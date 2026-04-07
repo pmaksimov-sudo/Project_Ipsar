@@ -69,20 +69,22 @@ export function AboutModal({ onClose }) {
           <div className={styles.privacySection}>
             <p className={styles.privacySectionTitle}>Направления деятельности</p>
             <p className={styles.privacySectionText}>
-              Узнайте больше о наших возможностях: полный каталог продукции и услуг группы компаний размещён на сайте ООО Группа Компаний СМТ{' '}
-              <a href="https://smtgroup.ru" target="_blank" rel="noopener noreferrer" style={{color: 'var(--color-accent)'}}>smtgroup.ru</a>
-            </p>
-            <p className={styles.privacySectionText}>
               — Производство систем водоочистки для клинико-диагностических лабораторий и научно-исследовательских центров, где требуется высокая степень очистки воды, включая полное сервисное сопровождение: монтаж, обучение, плановое обслуживание, поставка расходных материалов.
             </p>
             <p className={styles.privacySectionText}>
               — Предоставление услуг по монтажу, техническому обслуживанию и ремонту медицинского оборудования и аппаратуры по всем направлениям.
             </p>
+            <p className={styles.privacySectionText}>
+              Узнайте больше о наших возможностях: полный каталог продукции и услуг группы компаний размещён на сайте ООО Группа Компаний СМТ{' '}
+              <a href="https://smtgroup.ru" target="_blank" rel="noopener noreferrer" style={{color: 'var(--color-accent)'}}>smtgroup.ru</a>
+            </p>
           </div>
           <div className={styles.privacySection}>
             <p className={styles.privacySectionTitle}>Реквизиты</p>
             <p className={styles.privacySectionText}>
-              ОГРН 1027739605629 · ИНН 7713128976 · КПП 773001001
+              ОГРН 1027739605629<br />
+              ИНН 7713128976<br />
+              КПП 773001001
             </p>
           </div>
           <div className={styles.privacySection}>
