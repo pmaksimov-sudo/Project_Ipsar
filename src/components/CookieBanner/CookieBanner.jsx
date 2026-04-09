@@ -20,7 +20,7 @@ export default function CookieBanner() {
       <div className={styles.banner}>
         <p className={styles.text}>
           На этом сайте используются файлы cookies. Оставаясь на&nbsp;
-          <span className={styles.site}>ipsar.ru</span>,
+          <span className={styles.site}>ipsar.smtgroup.ru</span>,
           вы соглашаетесь с&nbsp;
           <button className={styles.link} onClick={() => setShowPrivacy(true)}>
             политикой обработки персональных данных

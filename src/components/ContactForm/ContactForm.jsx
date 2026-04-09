@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import emailjs from '@emailjs/browser'
 import { CONTACTS } from '../../content'
 import { ymGoal } from '../../hooks/useYandexMetrika'
@@ -123,6 +123,15 @@ export default function ContactForm() {
       })
       .finally(() => setSending(false))
   }
+
+  useEffect(() => {
+    if (submitted) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => { document.body.style.overflow = '' }
+  }, [submitted])
 
   if (submitted) {
     return (
