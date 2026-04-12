@@ -1,4 +1,4 @@
-const YM_ID = 'XXXXXXXX'; // Replace with real Yandex Metrika ID before deploy
+const YM_ID = 108486565;
 
 export const ymGoal = (goalName) => {
   if (typeof window !== 'undefined' && window.ym) {

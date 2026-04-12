@@ -124,45 +124,29 @@ export default function ContactForm() {
       .finally(() => setSending(false))
   }
 
-  useEffect(() => {
-    if (submitted) {
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = ''
-    }
-    return () => { document.body.style.overflow = '' }
-  }, [submitted])
-
-  if (submitted) {
-    return (
-      <>
-        <section className={styles.section} id="contact" />
-        <div className={styles.success}>
-          <span className={styles.successIcon}><Icon name="check" size={28} color="#fff" /></span>
-          <h2>Заявка отправлена!</h2>
-          <p>Специалист свяжется с вами в течение рабочего дня.</p>
-          <button className="btn btn-primary" onClick={() => setSubmitted(false)}>
-            Отправить ещё одну заявку
-          </button>
-          <button
-            className="btn btn-outline"
-            onClick={() => {
-              setSubmitted(false)
-              const scrollEl = document.getElementById('page-scroll')
-              if (scrollEl) scrollEl.scrollTo({ top: 0, behavior: 'smooth' })
-            }}
-          >
-            Вернуться на сайт
-          </button>
-        </div>
-      </>
-    )
-  }
-
   return (
     <section className={styles.section} id="contact">
       <div className="container">
-        <div className={styles.inner}>
+        {submitted ? (
+          <div className={styles.success}>
+            <span className={styles.successIcon}><Icon name="check" size={28} color="#fff" /></span>
+            <h2>Заявка отправлена!</h2>
+            <p>Специалист свяжется с вами в течение рабочего дня.</p>
+            <button className="btn btn-primary" onClick={() => setSubmitted(false)}>
+              Отправить ещё одну заявку
+            </button>
+            <button
+              className="btn btn-outline"
+              onClick={() => {
+                setSubmitted(false)
+                window.scrollTo({ top: 0, behavior: 'smooth' })
+              }}
+            >
+              Вернуться на сайт
+            </button>
+          </div>
+        ) : (
+          <div className={styles.inner}>
           <div className={styles.formWrap}>
             <h2 className="section-title">Получите консультацию или коммерческое предложение</h2>
             <p className={styles.subtitle}>
@@ -297,6 +281,7 @@ export default function ContactForm() {
             </div>
           </div>
         </div>
+        )}
       </div>
 
       {showPrivacy && <PrivacyModal onClose={() => setShowPrivacy(false)} />}
