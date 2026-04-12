@@ -116,6 +116,9 @@ export default function ContactForm() {
         setSubmitted(true)
         setForm(INITIAL)
         setTouched({})
+        setTimeout(() => {
+          document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+        }, 50)
       })
       .catch((err) => {
         console.error('EmailJS error:', err)
@@ -138,8 +141,7 @@ export default function ContactForm() {
             <button
               className="btn btn-outline"
               onClick={() => {
-                setSubmitted(false)
-                window.scrollTo({ top: 0, behavior: 'smooth' })
+                window.location.href = window.location.pathname
               }}
             >
               Вернуться на сайт
